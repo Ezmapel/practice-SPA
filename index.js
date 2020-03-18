@@ -1,6 +1,19 @@
 import * as components from "./components";
-
 import * as state from "./store";
+import Navigo from "navigo";
+import { capitalize } from "lodash";
+
+const router = new Navigo(window.location.origin);
+
+router
+  .on({
+    "/": () => render(state.Home),
+    ":page": params => {
+      let page = capitalize(params.page);
+      render(state[page]);
+    }
+  })
+  .resolve();
 
 function render(st) {
   document.querySelector("#root").innerHTML = `
@@ -9,18 +22,21 @@ function render(st) {
   ${components.Main(st)}
   ${components.Footer()}
 `;
-  addNavEventListeners();
+
+  router.updatePageLinks();
+
+  // addNavEventListeners();
 }
 
-render(state.Home);
+// render(state.Home);
 
-function addNavEventListeners() {
-  document.querySelectorAll("nav a").forEach(navLink =>
-    navLink.addEventListener("click", event => {
-      event.preventDefault(), render(state[event.target.textContent]);
-    })
-  );
-}
+// function addNavEventListeners() {
+//   document.querySelectorAll("nav a").forEach(navLink =>
+//     navLink.addEventListener("click", event => {
+//       event.preventDefault(), render(state[event.target.textContent]);
+//     })
+//   );
+// }
 
 function addPicOnFormSubmit() {
   document.querySelector("form").addEventListener("submit"),
