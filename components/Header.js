@@ -1,3 +1,3 @@
-export default () => `<header>
-  <h1>Example SPA</h1>
+export default st => `<header>
+  <h1>${st.Header}</h1>
 </header>`;

@@ -1,15 +1,11 @@
 export default () => `<form id="register" method="POST" action="">
     <div>
-      <label for="username">Username:</label>
-      <input type="text" name="username" id="username" placeholder="Enter Your Username">
+      <label for="url">Url:</label>
+      <input type="text" name="url" id="url" placeholder="Enter Your URL">
     </div>
     <div>
-      <label for="password">Password:</label>
-      <input type="password" name="password" id="password">
+      <label for="title">Title:</label>
+      <input type="text" name="title" id="title" placeholder="What's yo title?">
     </div>
-    <div>
-      <label for="email">Email:</label>
-      <input type="email" name="email" id="email" placeholder="your@email.here">
-    </div>
-    <input type="submit" name="register" value="Register">
+    <input type="submit" name="register" value="ADD PHOTO!!!!">
   </form>`;
