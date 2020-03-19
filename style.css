@@ -68,7 +68,7 @@ footer {
 @media (max-width: 549px){
   .hidden--mobile {
     display: none !important;
-  }  
+  }
 
   nav {
     display: flex;
@@ -116,7 +116,7 @@ footer {
     display: flex;
     justify-content: space-evenly;
     padding: 0 0;
-  } 
+  }
 
   nav > ul > li {
     display: inline-block;
@@ -146,4 +146,8 @@ footer {
     grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
     background-color: white;
   }
+}
+
+.blog-post {
+  margin: 5%;
 }
