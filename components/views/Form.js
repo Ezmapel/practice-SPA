@@ -1,4 +1,5 @@
-export default () => `<form id="register" method="POST" action="">
+export default () => `
+  <form id="register" method="POST" action="">
     <div>
       <label for="url">Url:</label>
       <input type="text" name="url" id="url" placeholder="Enter Your URL">
