@@ -21,7 +21,6 @@
   border-radius: 10px;
 }
 
-
 form {
   border: solid 1px black;
   display: flex;
@@ -150,4 +149,8 @@ footer {
 
 .blog-post {
   margin: 5%;
+}
+
+.test {
+  color: darkolivegreen;
 }
